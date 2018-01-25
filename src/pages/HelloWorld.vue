@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<Row>
-			<Col span="8">
+			<Col span="24">
 				<div>欢迎{{nameList.name}}</div>
 				<Table :columns="columns1" :data="nameList.list"></Table>
 			</Col>

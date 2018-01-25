@@ -3,16 +3,6 @@ import { Message } from 'iview'
 import store from '../store'
 import qs from 'qs'
 
-import Mock from 'mockjs'
-Mock.mock('mock.json', {
-  data: {
-    'name': '小小莹',
-    'list|1-10': [{
-			'id|+1': 1,
-			'email': '@EMAIL'
-	  }]
-  }
-})
 const fetch = (url, params, method) => {
   // store.commit('SHOW_PAGE_LOADING')
   return new Promise((resolve, reject) => {
@@ -50,5 +40,6 @@ const fetch = (url, params, method) => {
 
 export default {
   /* home */
-  getNameApi: params => fetch('mock.json', params)
+  getNameApi: params => fetch('mock.json', params),
+  LOGINApi: params => fetch('mock.json', params),
 }
